@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build and Debug Project",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${config:Project.Debug.Program}",
+            "args": ["${config:Project.Debug.Args}"],
+            "stopAtEntry": false,
+            "cwd": "${config:Project.Debug.CWD}",
+            "environment": [],
+            "preLaunchTask": "${config:Project.Debug.PreTask}",
+            "console": "externalTerminal"
+        }
+    ]
+}

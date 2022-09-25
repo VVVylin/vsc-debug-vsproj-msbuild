@@ -1,0 +1,93 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build-Debug-x86",
+            "command": "${config:Project.Build.Batch}",
+            "args": [
+                "/builder", "${config:Project.Builder}",
+                "/config", "${config:Project.Build.x86.Debug}",
+                "/slnfile", "${config:Project.SlnFile}",
+                "/winsdkver", "${config:Project.VS2015.WinSDKVer}",
+                "/action", "build"
+            ],
+            "options": {
+                "cwd": "${config:Project.Path}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Rebuild-Debug-x86",
+            "command": "${config:Project.Build.Batch}",
+            "args": [
+                "/builder", "${config:Project.Builder}",
+                "/config", "${config:Project.Build.x86.Debug}",
+                "/slnfile", "${config:Project.SlnFile}",
+                "/winsdkver", "${config:Project.VS2015.WinSDKVer}",
+                "/action", "rebuild"
+            ],
+            "options": {
+                "cwd": "${config:Project.Path}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Build-Release-x86",
+            "command": "${config:Project.Build.Batch}",
+            "args": [
+                "/builder", "${config:Project.Builder}",
+                "/config", "${config:Project.Build.x86.Release}",
+                "/slnfile", "${config:Project.SlnFile}",
+                "/winsdkver", "${config:Project.VS2015.WinSDKVer}",
+                "/action", "build"
+            ],
+            "options": {
+                "cwd": "${config:Project.Path}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Rebuild-Release-x86",
+            "command": "${config:Project.Build.Batch}",
+            "args": [
+                "/builder", "${config:Project.Builder}",
+                "/config", "${config:Project.Build.x86.Release}",
+                "/slnfile", "${config:Project.SlnFile}",
+                "/winsdkver", "${config:Project.VS2015.WinSDKVer}",
+                "/action", "rebuild"
+            ],
+            "options": {
+                "cwd": "${config:Project.Path}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+    ]
+}

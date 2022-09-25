@@ -1,0 +1,31 @@
+{    
+    // Configure Project Variables
+    "Project.Builder": "vs2015",
+    "Project.VS2015.WinSDKVer": "8.1",
+    "Project.SlnFile": "${config:Project.Folder}.sln",
+    "Project.Target": "${config:Project.Folder}.exe",
+    "Project.Include": "",
+    "Project.Debug.CWD": "${config:Project.Path}/${config:Project.Build.x86.Debug}",
+    "Project.Debug.Program": "${config:Project.Debug.CWD}/${config:Project.Target}",
+    "Project.Debug.Args": "",
+    "Project.Debug.PreTask": "Build-Debug-x86",
+
+    // Configure Project Intellisense
+    "C_Cpp.default.includePath": [
+        "${config:VS2015.Include.8.1}",
+        "${config:Project.Include}"
+    ],
+    "C_Cpp.default.defines": [
+        "WIN32",
+        "_DEBUG",
+        "_CONSOLE",
+        "_UNICODE",
+        "UNICODE"
+    ],
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.cppStandard": "c++98",
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
+
+    "files.encoding": "gb2312"
+}

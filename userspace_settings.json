@@ -1,0 +1,35 @@
+{
+	// Configure Visual Studio 2010 Global Environment
+    "VS2010.WinSDKDir": "C:/Program Files (x86)/Microsoft SDKs/Windows/v7.0A",
+    "VS2010.VCInstallDir": "D:/Program Files (x86)/Microsoft Visual Studio 10.0/vc",
+    "VS2010.x86.Compiler": "${config:VS2010.VCInstallDir}/bin/cl.exe",
+    "VS2010.x64.Compiler": "${config:VS2010.VCInstallDir}/bin/amd64/cl.exe",
+    "VS2010.VC.Source": "${config:VS2010.VCInstallDir}/crt/src;${config:VS2010.VCInstallDir}/atlmfc/src/atl;${config:VS2010.VCInstallDir}/atlmfc/src/mfcm;${config:VS2010.VCInstallDir}/atlmfc/src/mfc",
+    "VS2010.VC.Include": "${config:VS2010.VCInstallDir}/include;${config:VS2010.VCInstallDir}/atlmfc/include",
+    "VS2010.WinSDK.Include": "${config:VS2010.WinSDKDir}/Include",
+    "VS2010.Include": "${config:VS2010.WinSDK.Include};${config:VS2010.VC.Include};${config:VS2010.VC.Source}",
+
+    // Configure Visual Studio 2015 Global Environment
+    "VS2015.WinSDK8.1Dir": "C:/Program Files (x86)/Windows Kits/8.1",
+    "VS2015.WinSDK10.0Dir": "C:/Program Files (x86)/Windows Kits/10",
+    "VS2015.VCInstallDir": "D:/Program Files (x86)/Microsoft Visual Studio 14.0/VC",
+    "VS2015.x86.Compiler": "${config:VS2015.VCInstallDir}/bin/cl.exe",
+    "VS2015.x64.Compiler": "${config:VS2015.VCInstallDir}/bin/amd64/cl.exe",
+    "VS2015.VC.Source": "${config:VS2015.VCInstallDir}/atlmfc/src/mfc;${config:VS2015.VCInstallDir}/atlmfc/src/mfcm;${config:VS2015.VCInstallDir}/atlmfc/src/atl;${config:VS2015.VCInstallDir}/crt/src",
+    "VS2015.VC.Include": "${config:VS2015.VCInstallDir}/include;${config:VS2015.VCInstallDir}/atlmfc/include",
+    "VS2015.WinSDK8.1.Source": "${config:VS2015.WinSDK10.0Dir}/Source/10.0.10240.0/ucrt",
+    "VS2015.WinSDK8.1.Include": "${config:VS2015.WinSDK10.0Dir}/Include/10.0.10240.0/ucrt;${config:VS2015.WinSDK8.1Dir}/Include/um;${config:VS2015.WinSDK8.1Dir}/Include/shared;${config:VS2015.WinSDK8.1Dir}/Include/winrt",
+    "VS2015.WinSDK10.0.Source": "${config:VS2015.WinSDK10.0Dir}/Source/10.0.18362.0/ucrt",
+    "VS2015.WinSDK10.0.Include": "${config:VS2015.WinSDK10.0Dir}/Include/10.0.18362.0/ucrt;${config:VS2015.WinSDK10.0Dir}/Include/10.0.18362.0/um;${config:VS2015.WinSDK10.0Dir}/Include/10.0.18362.0/shared;${config:VS2015.WinSDK10.0Dir}/Include/10.0.18362.0/winrt;${config:VS2015.WinSDK10.0Dir}/Include/10.0.18362.0/cppwinrt;${config:VS2015.WinSDK10.0Dir}/../NETFXSDK/4.6.1/Include/um",
+    "VS2015.Include.8.1": "${config:VS2015.WinSDK8.1.Include};${config:VS2015.VC.Include};${config:VS2015.WinSDK8.1.Source};${config:VS2015.VC.Source}",
+    "VS2015.Include.10.0": "${config:VS2015.WinSDK10.0.Include};${config:VS2015.VC.Include};${config:VS2015.WinSDK10.0.Source};${config:VS2015.VC.Source}",
+
+    // Configure Project Global Environment
+    "Project.Path": "${workspaceFolder}",
+	"Project.Folder": "${workspaceFolderBasename}",
+    "Project.Build.Batch": "E:/script/build-vs.bat",
+    "Project.Build.x86.Debug": "Debug",
+    "Project.Build.x86.Release": "Release",
+    "Project.Build.x64.Debug": "Debug64",
+    "Project.Build.x64.Release": "Release64",
+}
